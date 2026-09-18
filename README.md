@@ -1,4 +1,4 @@
-# Documentação Técnica e Arquitetural do Site (Landing Page) - Rota Estudantil
+# Documentação Técnica e Arquitetural do Site (Landing Page) - VanBora
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
