@@ -60,7 +60,7 @@ function RouteStop({ time, label, detail, dotColor, pulse = false }) {
   return (
     <div className="relative route-stop">
       <div
-        className="absolute -left-[34px] top-1 w-3.5 h-3.5 rounded-full border-2 border-white"
+        className="absolute -left-[34px] top-1 w-3.5  h-3.5 rounded-full border-2 border-white"
         style={{ backgroundColor: dotColor, boxShadow: pulse ? `0 0 0 4px ${dotColor}22` : 'none' }}
       />
       <p className="text-xs text-slate-400 mb-1">{time}</p>
