@@ -8,7 +8,7 @@ export default function Pricing() {
           Do motorista autônomo à rede de transportadoras
         </h2>
         <p className="text-slate-600 max-w-lg mb-16">
-          O plano cresce junto com o número de rotas que você opera.
+          O plano cresce junto com o número de rotas que você opera no VanBora.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           <PriceCard

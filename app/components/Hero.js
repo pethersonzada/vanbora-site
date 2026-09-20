@@ -5,16 +5,16 @@ export default function Hero() {
     <section className="bg-white px-6 pt-20 pb-24">
       <div className="max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
         <div>
-          <p className="text-sm text-slate-500 mb-5">Para transportadoras, motoristas e escolas</p>
+          <p className="text-sm text-slate-500 mb-5">Para motoristas, rotas e estudantes universitários</p>
           <h1
             className="text-5xl md:text-[3.6rem] leading-[0.95] text-slate-950 mb-6"
             style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.01em' }}
           >
-            A rota que os pais confiam e o gestor enxerga inteira
+            VÁ MAIS LONGE, JUNTO.
           </h1>
           <p className="text-lg text-slate-600 max-w-md mb-9 leading-relaxed">
-            Acompanhe cada van em tempo real, confirme embarques com um toque
-            e avise os responsáveis assim que a criança chegar à escola.
+            Acompanhe a van em tempo real até a faculdade, confirme a presença com um toque
+            e mantenha todo o trajeto organizado com o VanBora.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <button className="bg-[#0E1524] text-white px-7 py-3.5 rounded-md font-medium hover:bg-[#1B2740] transition">
@@ -31,22 +31,22 @@ export default function Hero() {
           <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[#0E1524]/15 route-line" />
           <div className="space-y-14">
             <RouteStop
-              time="7:12"
+              time="18:30"
               label="Embarque confirmado"
-              detail="Maria S. — Rua das Palmeiras, 88"
+              detail="Maria S. — Ponto da Av. Principal"
               dotColor="#1B8A5A"
             />
             <RouteStop
-              time="7:24"
-              label="Em trajeto"
-              detail="Localização ao vivo — 3 paradas restantes"
+              time="19:05"
+              label="Em trajeto para o campus"
+              detail="Localização ao vivo — 2 paradas restantes"
               dotColor="#FFB020"
               pulse={true}
             />
             <RouteStop
-              time="7:41"
-              label="Chegada na escola"
-              detail="Notificação enviada aos responsáveis"
+              time="19:25"
+              label="Chegada na faculdade"
+              detail="Destino final alcançado com segurança"
               dotColor="#0E1524"
             />
           </div>

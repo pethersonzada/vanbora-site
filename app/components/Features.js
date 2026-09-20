@@ -10,22 +10,22 @@ export default function Features() {
             O que muda no dia a dia da rota
           </h2>
           <p className="text-slate-600 max-w-lg mb-20">
-            Três coisas que motorista, gestor e responsável precisam saber a todo momento — e que a maioria das planilhas não entrega.
+            Melhore a sua rota, economize combustível, ganhe tempo e ajude o planeta. 
           </p>
 
           <FeatureRow
             title="Rastreamento ao vivo, sem ligar pra ninguém"
-            text="O responsável abre o app e vê a van no mapa, com o horário estimado de chegada. Sem grupo de WhatsApp perguntando 'já saiu?'."
+            text="O responsável abre o app do VanBora e vê a van no mapa, com o horário estimado de chegada. Sem grupo de WhatsApp perguntando 'já saiu?'."
             reverse={false}
           />
           <FeatureRow
-            title="Embarque e desembarque confirmados por criança"
-            text="O motorista marca cada criança na lista ao subir e descer da van. Se alguém não embarcar, o responsável é avisado na hora — não no fim do dia."
+            title="Embarque e desembarque confirmados via app"
+            text="O app marca cada passageiro na lista ao subir e descer da van. Se alguém não embarcar, o responsável é avisado na hora, não no fim do dia."
             reverse={true}
           />
           <FeatureRow
             title="Aviso automático pra quem precisa saber"
-            text="Chegada, atraso, mudança de rota: a mensagem certa vai pro responsável certo, sem o gestor precisar digitar nada."
+            text="Chegada, atraso, mudança de rota: a alteração é feita na hora e em tempo real."
             reverse={false}
           />
         </div>
