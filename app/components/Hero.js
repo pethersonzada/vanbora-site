@@ -17,10 +17,10 @@ export default function Hero() {
             e mantenha todo o trajeto organizado com o VanBora.
           </p>
           <div className="flex flex-wrap items-center gap-6">
-            <button className="bg-[#0E1524] text-white px-7 py-3.5 rounded-md font-medium hover:bg-[#1B2740] transition">
+            <button className="bg-[#0E1524] text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-[#1B2740] transition">
               Agendar demonstração
             </button>
-            <button className="text-slate-900 font-medium border-b border-slate-300 hover:border-slate-900 transition pb-0.5">
+            <button className="text-slate-900 font-semibold border-b border-slate-300 hover:border-slate-900 transition pb-0.5">
               Ver como funciona
             </button>
           </div>

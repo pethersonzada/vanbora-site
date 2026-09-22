@@ -7,13 +7,13 @@ export default function Footer() {
       {/* CTA final */}
       <div className="px-6 py-24 text-center bg-[#0E1524]">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-white mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+          <h2 className="text-4xl font-bold tracking-tight text-white mb-6">
             Pronto para otimizar a sua rota?
           </h2>
           <p className="text-slate-300 mb-9">
             Quinze minutos de conversa mostram se o VanBora resolve o seu dia a dia. Sem compromisso.
           </p>
-          <button className="bg-[#FFB020] text-[#0E1524] px-8 py-3.5 rounded-md font-semibold hover:bg-[#FFC750] transition">
+          <button className="bg-[#FFB020] text-[#0E1524] px-8 py-3.5 rounded-xl font-semibold hover:bg-[#FFC750] transition">
             Agendar demonstração gratuita
           </button>
         </div>
