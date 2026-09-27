@@ -23,10 +23,10 @@ export default function GestorLogin() {
           </svg>
         </div>
         <h2 className="text-center text-3xl font-bold tracking-tight text-slate-950">
-          Área do Gestor e Frotas
+          Área do gestor
         </h2>
         <p className="mt-2 text-center text-sm text-slate-600">
-          Acesse para gerenciar rotas, turmas e acompanhar as vans em tempo real
+          Entre para acompanhar rotas, turmas e vans em tempo real
         </p>
       </div>
 
@@ -35,7 +35,7 @@ export default function GestorLogin() {
           <form className="space-y-6" onSubmit={handleLogin}>
             <div>
               <label className="block text-sm font-medium text-slate-700">
-                E-mail corporativo ou de acesso
+                E-mail
               </label>
               <div className="mt-1">
                 <input
@@ -78,7 +78,7 @@ export default function GestorLogin() {
                 type="submit"
                 className="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0E1524] hover:bg-[#1B2740] transition"
               >
-                Entrar no Painel
+                Entrar no painel
               </button>
             </div>
           </form>
@@ -89,7 +89,7 @@ export default function GestorLogin() {
                 <div className="w-full border-t border-slate-300" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="bg-white px-2 text-slate-500">Ou</span>
+                <span className="bg-white px-2 text-slate-500">ou</span>
               </div>
             </div>
 

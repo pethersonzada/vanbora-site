@@ -2,70 +2,113 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="bg-white px-6 pt-20 pb-24">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
-        <div>
-          <p className="text-sm text-slate-500 mb-5">Para motoristas, rotas e estudantes universitários</p>
-          <h1
-            className="text-5xl md:text-[3.6rem] leading-[0.95] text-slate-950 mb-6"
-            style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.01em' }}
-          >
-            VÁ MAIS LONGE, JUNTO.
-          </h1>
-          <p className="text-lg text-slate-600 max-w-md mb-9 leading-relaxed">
-            Acompanhe a van em tempo real até a faculdade, confirme a presença com um toque
-            e mantenha todo o trajeto organizado com o VanBora.
-          </p>
-          <div className="flex flex-wrap items-center gap-6">
-            <button className="bg-[#0E1524] text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-[#1B2740] transition">
-              Agendar demonstração
-            </button>
-            <button className="text-slate-900 font-semibold border-b border-slate-300 hover:border-slate-900 transition pb-0.5">
-              Ver como funciona
-            </button>
+    <section className="bg-white px-6 pt-20 pb-10">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-[56px] md:text-[76px] leading-[1.02] font-extrabold tracking-tight text-slate-950">
+          Vá mais longe,{' '}
+          <span className="inline-flex items-center gap-2 bg-[#E4F5EC] text-[#14663F] px-4 py-1 rounded-2xl align-middle">
+            <span  />
+            junto
+          </span>
+          .
+        </h1>
+
+        <p className="mt-7 text-lg md:text-xl text-slate-500 max-w-xl mx-auto leading-relaxed">
+          Rastreie a van, confirme quem embarcou e avise a família, tudo automático.
+        </p>
+
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <button className="bg-[#0E1524] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#1B2740] transition">
+            Agendar demonstração
+          </button>
+          <button className="bg-slate-100 text-slate-900 px-6 py-3 rounded-xl font-semibold hover:bg-slate-200 transition">
+            Ver como funciona
+          </button>
+        </div>
+      </div>
+
+      {/* Mockup do produto */}
+      <div className="max-w-5xl mx-auto mt-16 relative">
+        <div className="rounded-2xl border border-slate-200 shadow-[0_30px_60px_-15px_rgba(15,23,42,0.15)] overflow-hidden bg-white">
+          {/* barra de janela */}
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-100 bg-slate-50">
+            <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
+            <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
+            <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
+            <span className="mx-auto text-xs text-slate-400">vanbora.app/rotas</span>
+          </div>
+
+          <div className="flex h-[360px]">
+            {/* sidebar */}
+            <div className="hidden sm:block w-48 bg-[#0E1524] px-4 py-5 text-slate-300 text-sm shrink-0">
+              <p className="text-white font-semibold mb-5">Rota 12 · Manhã</p>
+              <div className="space-y-1">
+                <SidebarItem label="Rotas ativas" active />
+                <SidebarItem label="Motoristas" />
+                <SidebarItem label="Relatórios" />
+                <SidebarItem label="Responsáveis" />
+              </div>
+            </div>
+
+            {/* mapa */}
+            <div className="relative flex-1 bg-slate-50">
+              <svg viewBox="0 0 400 280" className="w-full h-full">
+                <path
+                  d="M40 220 C 100 180, 140 140, 190 120 S 280 70, 350 50"
+                  stroke="#1B8A5A"
+                  strokeWidth="3"
+                  strokeDasharray="1 10"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+                <circle cx="40" cy="220" r="6" fill="#1B8A5A" />
+                <circle cx="190" cy="120" r="6" fill="#FFB020" />
+                <circle cx="350" cy="50" r="6" fill="#0E1524" />
+              </svg>
+
+              <div className="absolute top-6 right-6 bg-white border border-slate-200 rounded-xl shadow-sm px-4 py-3 w-52">
+                <p className="text-xs text-slate-400 mb-1">18:32</p>
+                <p className="text-sm font-semibold text-slate-950">Embarque confirmado</p>
+                <p className="text-xs text-slate-500">Maria S. — Av. Principal</p>
+              </div>
+
+              <div className="absolute bottom-6 left-6 sm:left-8 bg-white border border-slate-200 rounded-xl shadow-sm px-4 py-3 w-52">
+                <p className="text-xs text-slate-400 mb-1">Ao vivo</p>
+                <p className="text-sm font-semibold text-slate-950">Faltam 2 paradas</p>
+                <p className="text-xs text-slate-500">Chegada estimada às 19:24</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Diagrama de rota animado */}
-        <div className="relative pl-10 py-4">
-          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[#0E1524]/15 route-line" />
-          <div className="space-y-14">
-            <RouteStop
-              time="18:30"
-              label="Embarque confirmado"
-              detail="Maria S. — Ponto da Av. Principal"
-              dotColor="#1B8A5A"
-            />
-            <RouteStop
-              time="19:05"
-              label="Em trajeto para o campus"
-              detail="Localização ao vivo — 2 paradas restantes"
-              dotColor="#FFB020"
-              pulse={true}
-            />
-            <RouteStop
-              time="19:25"
-              label="Chegada na faculdade"
-              detail="Destino final alcançado com segurança"
-              dotColor="#0E1524"
-            />
-          </div>
+      {/* faixa de contexto */}
+      <div className="max-w-4xl mx-auto mt-16 pb-6">
+        <p className="text-center text-xs uppercase tracking-wide text-slate-400 mb-5">
+          Feito para quem roda todo santo dia
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-slate-400 font-semibold text-sm">
+          <span>Vans escolares</span>
+          <Dot />
+          <span>Fretados universitários</span>
+          <Dot />
+          <span>Transporte corporativo</span>
+          <Dot />
+          <span>Cooperativas de motoristas</span>
         </div>
       </div>
     </section>
   );
 }
 
-function RouteStop({ time, label, detail, dotColor, pulse = false }) {
+function SidebarItem({ label, active = false }) {
   return (
-    <div className="relative route-stop">
-      <div
-        className="absolute -left-[34px] top-1 w-3.5  h-3.5 rounded-full border-2 border-white"
-        style={{ backgroundColor: dotColor, boxShadow: pulse ? `0 0 0 4px ${dotColor}22` : 'none' }}
-      />
-      <p className="text-xs text-slate-400 mb-1">{time}</p>
-      <p className="font-semibold text-slate-950">{label}</p>
-      <p className="text-sm text-slate-500">{detail}</p>
+    <div className={`px-3 py-1.5 rounded-md ${active ? 'bg-white/10 text-white font-medium' : ''}`}>
+      {label}
     </div>
   );
+}
+
+function Dot() {
+  return <span className="w-1 h-1 rounded-full bg-slate-300 hidden sm:block" />;
 }

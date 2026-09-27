@@ -3,143 +3,150 @@ import React from 'react';
 export default function Features() {
   return (
     <>
-      {/* Funcionalidades */}
-      <section id="funcionalidades" className="px-6 py-32">
-        <div className="max-w-6xl mx-auto">
-          <div className="max-w-2xl mb-20">
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 mb-4">
-              O que muda no dia a dia da rota
+      <section id="funcionalidades" className="relative px-6 py-28 overflow-hidden">
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              'radial-gradient(circle at 20% 20%, rgba(27,138,90,0.06), transparent 45%), radial-gradient(circle at 80% 10%, rgba(255,176,32,0.08), transparent 40%), #FAFAF9',
+          }}
+        />
+        <div
+          className="absolute inset-0 -z-10 opacity-[0.4]"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, rgba(15,23,42,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.03) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
+
+        <div className="max-w-5xl mx-auto relative">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight mb-5">
+              Tudo que a rota precisa,
+              <br />
+              <span
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, #1B8A5A, #FFB020)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                sem precisar de mágica.
+              </span>
             </h2>
-            <p className="text-lg text-slate-600">
-              Melhore a sua rota, economize combustível, ganhe tempo e ajude o planeta.
+            <p className="text-slate-500 leading-relaxed">
+              Cada função existe pra resolver um problema real de quem dirige, gerencia
+              ou espera a van chegar em segurança.
             </p>
           </div>
 
-          <FeatureRow
-            title="Rastreamento ao vivo, sem ligar pra ninguém"
-            text="O responsável abre o app do VanBora e vê a van no mapa, com o horário estimado de chegada. Sem grupo de WhatsApp perguntando 'já saiu?'."
-            accent="#1B8A5A"
-            icon={<TrackingIcon />}
-            reverse={false}
-          />
-          <FeatureRow
-            title="Embarque e desembarque confirmados via app"
-            text="O app marca cada passageiro na lista ao subir e descer da van. Se alguém não embarcar, o responsável é avisado na hora, não no fim do dia."
-            accent="#FFB020"
-            icon={<ChecklistIcon />}
-            reverse={true}
-          />
-          <FeatureRow
-            title="Aviso automático pra quem precisa saber"
-            text="Chegada, atraso, mudança de rota: a alteração é feita na hora e em tempo real."
-            accent="#0E1524"
-            icon={<AlertIcon />}
-            reverse={false}
-          />
-        </div>
-      </section>
-
-      {/* Benefícios por público */}
-      <section id="beneficios" className="bg-slate-50 px-6 py-32">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold tracking-tight text-slate-950 mb-16">
-            Pensado pra quem vive a rota
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <AudienceCard
-              audience="Motorista"
-              accent="#1B8A5A"
-              items={[
-                'Lista de embarque na tela, sem papel',
-                'Rota otimizada antes de sair da garagem',
-                'Um toque pra avisar atraso ou imprevisto',
-              ]}
+          {/* Grade de 6 cards */}
+          <div className="grid md:grid-cols-3 gap-5">
+            <FeatureCard
+              icon={<PinIcon />}
+              title="Rastreamento ao vivo"
+              text="Veja a van no mapa em tempo real, com horário estimado de chegada pra cada parada."
             />
-            <AudienceCard
-              audience="Gestor da van/frota"
-              accent="#FFB020"
-              items={[
-                'Painel com todas as rotas em um só lugar',
-                'Histórico de pontualidade por motorista',
-                'Alertas automáticos de rota fora do previsto',
-              ]}
+            <FeatureCard
+              icon={<CheckIcon />}
+              title="Embarque confirmado"
+              text="Cada passageiro é marcado na lista ao subir e descer, sem papel e sem contar de cabeça."
             />
-            <AudienceCard
-              audience="Responsável"
-              accent="#0E1524"
-              items={[
-                'Localização da van em tempo real',
-                'Confirmação de embarque e chegada',
-                'Contato direto com o motorista pelo app',
-              ]}
+            <FeatureCard
+              icon={<BellIcon />}
+              title="Avisos automáticos"
+              text="Atraso, mudança de rota ou imprevisto: quem precisa saber, sabe em segundos."
+            />
+            <FeatureCard
+              icon={<RouteIcon />}
+              title="Rota já otimizada"
+              text="O melhor caminho é calculado antes de sair da garagem, considerando trânsito e paradas."
+            />
+            <FeatureCard
+              icon={<ChartIcon />}
+              title="Relatório de pontualidade"
+              text="Acompanhe o histórico de horários e enxergue rápido onde os atrasos se repetem."
+            />
+            <FeatureCard
+              icon={<ClockIcon />}
+              title="Histórico completo"
+              text="Toda viagem fica registrada: quem embarcou, em que horário e em qual parada."
             />
           </div>
         </div>
       </section>
+
     </>
   );
 }
 
-function FeatureRow({ title, text, accent, icon, reverse }) {
+function FeatureCard({ icon, title, text }) {
   return (
-    <div className={`grid md:grid-cols-2 gap-10 items-center py-14 border-t border-slate-200 ${reverse ? 'md:[&>*:first-child]:order-2' : ''}`}>
-      <div
-        className="aspect-[4/3] rounded-2xl flex items-center justify-center"
-        style={{ backgroundColor: `${accent}0D`, border: `1px solid ${accent}33` }}
-      >
+    <div className="bg-white/80 backdrop-blur border border-slate-100 rounded-2xl p-7 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+      <div className="w-11 h-11 rounded-xl border border-slate-200 bg-white flex items-center justify-center mb-5">
         {icon}
       </div>
-      <div>
-        <h3 className="text-2xl font-bold text-slate-950 mb-3">{title}</h3>
-        <p className="text-slate-600 leading-relaxed">{text}</p>
-      </div>
+      <h3 className="text-lg font-bold text-slate-950 mb-2">{title}</h3>
+      <p className="text-sm text-slate-500 leading-relaxed">{text}</p>
     </div>
   );
 }
 
-function TrackingIcon() {
+function PinIcon() {
   return (
-    <svg width="120" height="100" viewBox="0 0 120 100" fill="none">
-      <path d="M60 14C46 14 35 25 35 39c0 20 25 47 25 47s25-27 25-47c0-14-11-25-25-25z" stroke="#1B8A5A" strokeWidth="2" fill="none" />
-      <circle cx="60" cy="39" r="8" fill="#1B8A5A" />
-      <circle cx="60" cy="86" r="3" fill="#1B8A5A" opacity="0.3" />
-      <circle cx="60" cy="86" r="14" stroke="#1B8A5A" strokeWidth="1" opacity="0.25" />
-      <circle cx="60" cy="86" r="24" stroke="#1B8A5A" strokeWidth="1" opacity="0.12" />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="#0E1524" strokeWidth="1.8" />
+      <circle cx="12" cy="9" r="2.5" stroke="#0E1524" strokeWidth="1.8" />
     </svg>
   );
 }
 
-function ChecklistIcon() {
+function CheckIcon() {
   return (
-    <svg width="120" height="100" viewBox="0 0 120 100" fill="none">
-      <rect x="28" y="18" width="64" height="64" rx="4" stroke="#FFB020" strokeWidth="2" fill="none" />
-      <rect x="44" y="12" width="32" height="12" rx="2" fill="#FFB020" />
-      {[32, 50, 68].map((y, i) => (
-        <g key={y}>
-          <rect x="38" y={y - 5} width="10" height="10" rx="2" stroke="#FFB020" strokeWidth="1.5" fill={i < 2 ? '#FFB020' : 'none'} />
-          {i < 2 && <path d={`M40 ${y} l2.5 2.5 L46 ${y - 3}`} stroke="#fff" strokeWidth="1.4" fill="none" />}
-          <rect x="56" y={y - 2} width="26" height="4" rx="2" fill="#0E1524" opacity="0.5" />
-        </g>
-      ))}
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect x="4" y="4" width="16" height="16" rx="4" stroke="#0E1524" strokeWidth="1.8" />
+      <path d="M8 12.5l2.5 2.5L16 9" stroke="#0E1524" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function AlertIcon() {
+function BellIcon() {
   return (
-    <svg width="120" height="100" viewBox="0 0 120 100" fill="none">
-      <path
-        d="M60 22c-16 0-20 12-20 22v14l-6 10h52l-6-10V44c0-10-4-22-20-22z"
-        stroke="#0E1524"
-        strokeWidth="2"
-        fill="none"
-      />
-      <path d="M52 74a8 8 0 0016 0" stroke="#0E1524" strokeWidth="2" fill="none" />
-      <circle cx="82" cy="26" r="10" fill="#FFB020" />
-      <path d="M79 26l2 2 4-5" stroke="#0E1524" strokeWidth="1.6" fill="none" />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 4a5 5 0 00-5 5v3l-2 4h14l-2-4V9a5 5 0 00-5-5z" stroke="#0E1524" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M9.5 19a2.5 2.5 0 005 0" stroke="#0E1524" strokeWidth="1.8" />
     </svg>
   );
 }
+
+function RouteIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <circle cx="6" cy="6" r="2" stroke="#0E1524" strokeWidth="1.8" />
+      <circle cx="18" cy="18" r="2" stroke="#0E1524" strokeWidth="1.8" />
+      <path d="M6 8v4a4 4 0 004 4h4" stroke="#0E1524" strokeWidth="1.8" strokeDasharray="2 3" />
+    </svg>
+  );
+}
+
+function ChartIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M4 20V10M12 20V4M20 20v-7" stroke="#0E1524" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ClockIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="8" stroke="#0E1524" strokeWidth="1.8" />
+      <path d="M12 8v4l3 2" stroke="#0E1524" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 
 function AudienceCard({ audience, items, accent }) {
   return (
@@ -147,7 +154,7 @@ function AudienceCard({ audience, items, accent }) {
       <h3 className="text-lg font-bold text-slate-950 mb-5">{audience}</h3>
       <ul className="space-y-3">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-2.5 text-sm text-slate-600">
+          <li key={item} className="flex items-start gap-2.5 text-sm text-slate-500">
             <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: accent }} />
             {item}
           </li>

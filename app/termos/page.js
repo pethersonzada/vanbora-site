@@ -18,37 +18,45 @@ export default function TermosPage() {
 
         <div className="space-y-8 text-slate-600 leading-relaxed text-sm md:text-base">
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-slate-950">1. Aceitação dos Termos</h2>
+            <h2 className="text-xl font-semibold text-slate-950">1. Aceitação dos termos</h2>
             <p>
-              Ao acessar e utilizar a solução Rota Estudantil, você concorda expressamente em cumprir e estar vinculado aos termos e condições descritos neste documento. Caso não concorde com qualquer parte destes termos, por favor, abstenha-se de utilizar nossa plataforma e nossos aplicativos móveis.
+              Ao usar o VanBora, seja pelo site ou pelo aplicativo, você concorda com as condições
+              descritas aqui. Se algo neste documento não fizer sentido pra você, entre em contato
+              antes de continuar usando a plataforma.
             </p>
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-slate-950">2. Sobre a Solução</h2>
+            <h2 className="text-xl font-semibold text-slate-950">2. Sobre o VanBora</h2>
             <p>
-              O Rota Estudantil é um ecossistema tecnológico voltado para a otimização, controle de presença e monitoramento de rotas de transporte escolar, interligando motoristas, gestores de frotas e responsáveis de estudantes.
+              O VanBora é uma plataforma de rastreamento e gestão de rotas de transporte escolar
+              que conecta motoristas, gestores de frota e responsáveis por estudantes num só lugar.
             </p>
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-slate-950">3. Privacidade e Proteção de Dados</h2>
+            <h2 className="text-xl font-semibold text-slate-950">3. Privacidade e dados</h2>
             <p>
-              Respeitamos a sua privacidade e a segurança dos dados operacionais e cadastrais inseridos na plataforma. As informações coletadas — como dados de perfil, status de presença e rotas — são utilizadas estritamente para garantir a execução eficiente e segura do serviço de transporte contratado, em conformidade com as diretrizes de proteção de dados vigentes.
+              Levamos a sério a segurança dos dados de rota, presença e cadastro. Essas informações
+              são usadas apenas para garantir que o transporte contratado funcione com segurança e
+              eficiência, seguindo a legislação de proteção de dados em vigor no Brasil.
             </p>
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-slate-950">4. Propriedade Intelectual e Direitos Autorais</h2>
+            <h2 className="text-xl font-semibold text-slate-950">4. Propriedade intelectual</h2>
             <p>
-              Todo o código-fonte, arquitetura de software, layouts, marcas, textos e elementos visuais associados à solução Rota Estudantil são de propriedade exclusiva do autor e desenvolvedor Miguel Petherson Silva. É expressamente proibida a reprodução, engenharia reversa, modificação ou distribuição não autorizada dos ativos.
+              O código-fonte, a marca, o layout e os demais elementos do VanBora pertencem aos seus
+              criadores. Reprodução, engenharia reversa ou distribuição não autorizada desses ativos
+              não é permitida.
             </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-xl font-semibold text-slate-950">5. Contato</h2>
             <p>
-              Dúvidas, solicitações ou notificações referentes a estes termos de uso podem ser direcionadas através dos canais oficiais informados no ecossistema da aplicação.
+              Dúvidas ou solicitações sobre estes termos podem ser enviadas pelos canais oficiais
+              informados dentro do próprio aplicativo.
             </p>
           </section>
         </div>
