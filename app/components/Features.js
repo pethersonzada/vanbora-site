@@ -25,13 +25,7 @@ export default function Features() {
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight mb-5">
               Tudo que a rota precisa,
               <br />
-              <span
-                style={{
-                  backgroundImage: 'linear-gradient(90deg, #1B8A5A, #FFB020)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
+              <span className="text-[#feb723]">
                 sem precisar de mágica.
               </span>
             </h2>
@@ -41,7 +35,6 @@ export default function Features() {
             </p>
           </div>
 
-          {/* Grade de 6 cards */}
           <div className="grid md:grid-cols-3 gap-5">
             <FeatureCard
               icon={<PinIcon />}

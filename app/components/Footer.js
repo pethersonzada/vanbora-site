@@ -4,7 +4,6 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-white text-slate-500 text-sm border-t border-slate-100">
-      {/* CTA final */}
       <div className="px-6 py-24 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-extrabold tracking-tight text-slate-950 mb-6">
@@ -19,7 +18,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Rodapé inferior */}
       <div className="max-w-6xl mx-auto px-6 py-10 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p>&copy; {new Date().getFullYear()} VanBora. Todos os direitos reservados.</p>
         <div className="flex items-center gap-6">

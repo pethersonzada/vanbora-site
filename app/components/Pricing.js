@@ -20,6 +20,7 @@ export default function Pricing() {
             period="por mês / 1 van"
             description="Pra quem dirige e gerencia a própria rota, sem intermediário."
             features={['Rastreamento ao vivo', 'Lista de embarque digital', 'Avisos automáticos aos responsáveis', 'Suporte por e-mail']}
+            cta="Começar agora"
           />
           <PriceCard
             name="Frota"
@@ -27,6 +28,7 @@ export default function Pricing() {
             period="por mês / até 8 vans"
             description="Pra quem administra várias rotas e quer ver tudo num lugar só."
             features={['Tudo do plano Autônomo', 'Painel de gestão central', 'Relatórios de pontualidade', 'Suporte prioritário no WhatsApp']}
+            cta="Começar agora"
             highlight={true}
           />
           <PriceCard
@@ -35,6 +37,7 @@ export default function Pricing() {
             period="frotas grandes e escolas"
             description="Pra redes de ensino e operações que precisam de integração à parte."
             features={['Múltiplos gestores', 'API para sistemas escolares', 'Gestor de conta dedicado', 'Treinamento presencial']}
+            cta="Falar com a gente"
           />
         </div>
       </div>
@@ -42,16 +45,18 @@ export default function Pricing() {
   );
 }
 
-function PriceCard({ name, price, period, description, features, highlight = false }) {
+function PriceCard({ name, price, period, description, features, cta, highlight = false }) {
   return (
     <div
-      className={`relative rounded-2xl p-8 border ${
-        highlight ? 'border-[#1B8A5A] bg-[#F4FBF7]' : 'border-slate-200 bg-white'
+      className={`relative rounded-2xl p-8 ${
+        highlight
+          ? 'border-2 border-[#feb723] bg-[#FFFBF0]'
+          : 'border border-slate-200 bg-white'
       }`}
     >
       {highlight && (
-        <div className="absolute -top-3 left-8 bg-[#1B8A5A] text-white text-xs font-semibold px-3 py-1 rounded-full">
-          A maioria escolhe este
+        <div className="absolute -top-3 left-8 bg-[#feb723] text-[#0E1524] text-xs font-semibold px-3 py-1 rounded-full">
+          Recomendado
         </div>
       )}
       <h3 className="text-xl font-bold text-slate-950 mb-2">{name}</h3>
@@ -63,21 +68,23 @@ function PriceCard({ name, price, period, description, features, highlight = fal
       </div>
 
       <button
-        className={`w-full py-3.5 rounded-xl font-semibold transition-all mb-8 ${
+        className={`w-full py-3.5 rounded-xl font-semibold transition-all mb-8 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E1524] ${
           highlight
-            ? 'bg-[#1B8A5A] text-white hover:bg-[#166F49]'
+            ? 'bg-[#feb723] text-[#0E1524] hover:bg-[#f5aa10]'
             : 'bg-slate-100 text-slate-950 hover:bg-slate-200'
         }`}
       >
-        Começar agora
+        {cta}
       </button>
 
       <ul className="space-y-4">
         {features.map((f, idx) => (
           <li key={idx} className="flex items-start gap-3 text-sm">
-            <svg className="w-5 h-5 shrink-0 text-[#1B8A5A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-            </svg>
+            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#feb723]">
+              <svg className="w-3 h-3 text-[#0E1524]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
             <span className="text-slate-600">{f}</span>
           </li>
         ))}
